@@ -14,19 +14,15 @@ import {Utils} from "@recon/Utils.sol";
 
 // Your deps
 import {ERC20} from "src/tokens/ERC20.sol";
-import {ERC4626} from "src/tokens/ERC4626.sol";
-import {MockERC4626} from "src/test/utils/mocks/MockERC4626.sol";
+import "src/test/utils/mocks/MockERC4626.sol";
 
 abstract contract Setup is BaseSetup, ActorManager, AssetManager, Utils {
-    ERC4626 erc4626;
     MockERC4626 mockERC4626;
     
     /// === Setup === ///
     /// This contains all calls to be performed in the tester constructor, both for Echidna and Foundry
     function setup() internal virtual override {
-        ERC20 underlying = ERC20(_newAsset(18));
-        mockERC4626 = new MockERC4626(underlying, "Mock Vault", "mVLT");
-        erc4626 = mockERC4626;
+        mockERC4626 = new MockERC4626(ERC20(_newAsset(18)), "Mock ERC4626 Vault", "m4626");
     }
 
     /// === MODIFIERS === ///

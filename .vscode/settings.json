@@ -6,7 +6,7 @@
   "files.associations": {
     ".gas-snapshot": "julia"
   },
-  "recon.defaultFuzzer": "Echidna",
+  "recon.defaultFuzzer": "Medusa",
   "coverage-gutters.manualCoverageFilePaths": [
     "/home/ret2basic/solmate-ERC4626-scaffold/echidna/covered.1770218899.lcov"
   ]

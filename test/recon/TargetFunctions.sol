@@ -11,14 +11,12 @@ import {Panic} from "@recon/Panic.sol";
 // NOTE: Always import and apply them in alphabetical order, so much easier to debug!
 import { AdminTargets } from "./targets/AdminTargets.sol";
 import { DoomsdayTargets } from "./targets/DoomsdayTargets.sol";
-import { Erc4626Targets } from "./targets/Erc4626Targets.sol";
 import { ManagersTargets } from "./targets/ManagersTargets.sol";
 import { MockERC4626Targets } from "./targets/MockERC4626Targets.sol";
 
 abstract contract TargetFunctions is
     AdminTargets,
     DoomsdayTargets,
-    Erc4626Targets,
     ManagersTargets,
     MockERC4626Targets
 {
